@@ -62,7 +62,7 @@ function Footer() {
   </a>
 
   <a
-    href="https://www.instagram.com/YOUR_ACCOUNT"
+    href="https://www.instagram.com/golden__catering__services/"
     target="_blank"
     rel="noreferrer"
     aria-label="Instagram"
