@@ -1,0 +1,71 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wdth,wght@75..100,400..700&family=Instrument+Serif:ital@0;1&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  /* Container */
+  --container-8xl: 90rem;
+
+  /* Fonts */
+  --font-serif: "Instrument Serif", serif;
+  --font-sans: "Instrument Sans", sans-serif;
+
+  /* Brand Colors */
+  --color-gold: #d4af37;
+  --color-gold-light: #f5d77a;
+  --color-gold-dark: #8f681c;
+
+  --color-luxury-black: #080706;
+  --color-luxury-surface: #15120e;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  margin: 0;
+  background: #080706;
+  color: #f5f0e6;
+  font-family: var(--font-sans);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+}
+
+
+
+@keyframes greetingFade {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hide scrollbar but keep scrolling enabled */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
