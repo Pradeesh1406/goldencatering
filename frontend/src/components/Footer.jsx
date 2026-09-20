@@ -149,7 +149,7 @@ function Footer() {
             <div className="space-y-4 text-sm">
               <a
                 href="tel:8754698739"
-                className="block text-[#F5F1E8] transition-colors hover:text-[#D4AF37]"
+                className="block text-[#A99C89] transition-colors hover:text-[#D4AF37]"
               >
                 +91 87546 98739
               </a>
