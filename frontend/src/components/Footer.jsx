@@ -193,7 +193,7 @@ function Footer() {
   <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-4 text-center text-xs text-[#776B5A] lg:justify-between">
     {/* Copyright */}
     <p className="whitespace-nowrap">
-      © {new Date().getFullYear()} Golden Catering
+      © {new Date().getFullYear()} Golden Catering Services
     </p>
 
     {/* Developer Credit */}

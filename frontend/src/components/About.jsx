@@ -43,7 +43,7 @@ function About() {
           {/* Content */}
           <div>
             <p className="mb-6 text-lg leading-8 text-[#665F54]">
-              At Golden Catering, we believe every celebration deserves
+              At Golden Catering Services, we believe every celebration deserves
               exceptional food, heartfelt hospitality and unforgettable
               memories.
             </p>
