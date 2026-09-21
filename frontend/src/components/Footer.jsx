@@ -203,11 +203,16 @@ function Footer() {
     href="https://pradeesh-portfolio-orcin.vercel.app/"
     target="_blank"
     rel="noreferrer"
-    className="ml-1 font-medium text-[#D4AF37] transition-colors duration-300 hover:text-[#F5F1E8]"
+    className="ml-1 font-medium text-[#776B5A] underline decoration-[#776B5A]/50 underline-offset-4 transition-colors duration-300 hover:text-[#F5F1E8]"
+    aria-label="Visit Pradeesh's portfolio"
   >
     Pradeesh
   </a>
-  <Heart size={13} className="fill-red-800 text-red-800" />
+
+  <Heart
+    size={13}
+    className="fill-[#8B0000] text-[#8B0000]"
+  />
 </p>
 
     {/* Back to Top */}
