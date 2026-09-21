@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
+import { Heart } from "lucide-react";
 
 function Footer() {
   const menuLinks = [
@@ -156,10 +157,10 @@ function Footer() {
               </a>
 
               <a
-                href="mailto:hello@goldencatering.com"
+                href="mailto:thangapandian0905@gmail.com"
                 className="block break-all text-[#B9AD9B] transition-colors hover:text-[#D4AF37]"
               >
-                hello@goldencatering.com
+                thangapandian0905@gmail.com
               </a>
 
               <p className="text-[#B9AD9B]">
@@ -188,23 +189,37 @@ function Footer() {
         </div> */}
 
         {/* Bottom Footer */}
-        <div className="flex flex-col gap-4 border-t border-[#3B3022] pt-7 text-xs text-[#776B5A] sm:flex-row sm:items-center sm:justify-between">
-          <p>
-            © {new Date().getFullYear()} Golden Catering. All rights reserved.
-          </p>
+<div className="border-t border-[#3B3022] pt-7">
+  <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-4 text-center text-xs text-[#776B5A] lg:justify-between">
+    {/* Copyright */}
+    <p className="whitespace-nowrap">
+      © {new Date().getFullYear()} Golden Catering
+    </p>
 
-          <p className="text-center">
-            Crafted with passion. Served with love.
-          </p>
+    {/* Developer Credit */}
+   <p className="flex items-center justify-center whitespace-nowrap">
+  Designed & Developed by{" "}
+  <a
+    href="https://pradeesh-portfolio-orcin.vercel.app/"
+    target="_blank"
+    rel="noreferrer"
+    className="ml-1 font-medium text-[#D4AF37] transition-colors duration-300 hover:text-[#F5F1E8]"
+  >
+    Pradeesh
+  </a>
+  <Heart size={13} className="fill-red-800 text-red-800" />
+</p>
 
-          <button
-            type="button"
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="transition-colors hover:text-[#D4AF37]"
-          >
-            Back to top ↑
-          </button>
-        </div>
+    {/* Back to Top */}
+    <button
+      type="button"
+      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      className="whitespace-nowrap transition-colors hover:text-[#D4AF37]"
+    >
+      Back to top ↑
+    </button>
+  </div>
+</div>
       </div>
     </footer>
   );
