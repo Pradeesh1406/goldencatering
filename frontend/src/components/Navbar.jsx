@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import { Menu, X, Phone, ArrowUpRight } from "lucide-react";
 import logo from "../assets/logo.png";
 
@@ -8,12 +9,13 @@ function Navbar() {
   const [activeLink, setActiveLink] = useState("Home");
 
   const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "Services", href: "#services" },
-    { name: "Menu", href: "#menu" },
-    { name: "Gallery", href: "#gallery" },
-    { name: "Contact", href: "#contact" },
-  ];
+  { name: "Home", href: "/" },
+  { name: "AboutUs", href: "/about" },
+  { name: "Services", href: "/services" },
+  { name: "Menu", href: "/menu" },
+  { name: "Gallery", href: "/gallery" },
+  { name: "Contact", href: "/contact" },
+];
 
   const handleNavClick = (name) => {
     setActiveLink(name);
@@ -27,7 +29,7 @@ function Navbar() {
         <div className="mx-auto flex h-20 w-full max-w-8xl items-center justify-between px-5 sm:px-8 lg:px-12">
 
           {/* Logo */}
-          <a
+          {/* <a
             href="#home"
             onClick={() => handleNavClick("Home")}
             className="block"
@@ -37,30 +39,47 @@ function Navbar() {
               alt="Golden Catering"
               className="h-16 w-auto object-contain"
             />
-          </a>
+          </a> */}
+
+          <Link
+  to="/"
+  onClick={() => handleNavClick("Home")}
+  className="block"
+>
+  <img
+    src={logo}
+    alt="Golden Catering"
+    className="h-16 w-auto object-contain"
+  />
+</Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden items-center gap-8 lg:flex">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                onClick={() => handleNavClick(link.name)}
-                className={`relative font-sans text-sm transition-colors duration-300 ${
-                  activeLink === link.name
-                    ? "text-[#d4af37]"
-                    : "text-white/80 hover:text-[#d4af37]"
-                }`}
-              >
-                {link.name}
+  {navLinks.map((link) => (
+    <NavLink
+      key={link.name}
+      to={link.href}
+      onClick={() => handleNavClick(link.name)}
+      className={({ isActive }) =>
+        `relative font-sans text-sm transition-colors duration-300 ${
+          isActive
+            ? "text-[#d4af37]"
+            : "text-white/80 hover:text-[#d4af37]"
+        }`
+      }
+    >
+      {({ isActive }) => (
+        <>
+          {link.name}
 
-                {/* Active Underline */}
-                {activeLink === link.name && (
-                  <span className="absolute -bottom-2 left-0 h-px w-full bg-[#d4af37]" />
-                )}
-              </a>
-            ))}
-          </nav>
+          {isActive && (
+            <span className="absolute -bottom-2 left-0 h-px w-full bg-[#d4af37]" />
+          )}
+        </>
+      )}
+    </NavLink>
+  ))}
+</nav>
 
           {/* Right Actions */}
           <div className="flex items-center gap-3">
@@ -124,33 +143,35 @@ function Navbar() {
         </div>
 
         {/* Drawer Navigation */}
-        <nav className="mt-10 flex flex-col gap-2">
-          {navLinks.map((link, index) => (
-            <a
-              key={link.name}
-              href={link.href}
-              onClick={() => handleNavClick(link.name)}
-              className={`group flex items-center justify-between border-b border-white/10 py-5 font-serif text-2xl transition-colors ${
-                activeLink === link.name
-                  ? "text-[#d4af37]"
-                  : "text-white hover:text-[#d4af37]"
-              }`}
-            >
-              <span>
-                <span className="mr-4 font-sans text-xs text-[#d4af37]">
-                  0{index + 1}
-                </span>
+       <nav className="mt-10 flex flex-col gap-2">
+  {navLinks.map((link, index) => (
+    <NavLink
+      key={link.name}
+      to={link.href}
+      onClick={() => handleNavClick(link.name)}
+      className={({ isActive }) =>
+        `group flex items-center justify-between border-b border-white/10 py-5 font-serif text-2xl transition-colors ${
+          isActive
+            ? "text-[#d4af37]"
+            : "text-white hover:text-[#d4af37]"
+        }`
+      }
+    >
+      <span>
+        <span className="mr-4 font-sans text-xs text-[#d4af37]">
+          0{index + 1}
+        </span>
 
-                {link.name}
-              </span>
+        {link.name}
+      </span>
 
-              <ArrowUpRight
-                size={22}
-                className="opacity-40 transition group-hover:opacity-100"
-              />
-            </a>
-          ))}
-        </nav>
+      <ArrowUpRight
+        size={22}
+        className="opacity-40 transition group-hover:opacity-100"
+      />
+    </NavLink>
+  ))}
+</nav>
 
         {/* Drawer Footer */}
         <div className="mt-auto border-t border-white/10 pt-6">

@@ -1,32 +1,33 @@
 import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 function Footer() {
   const menuLinks = [
-    { name: "Home", href: "/" },
-    { name: "About Us", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Our Menu", href: "#menu" },
-    { name: "Gallery", href: "/gallery" },
-    { name: "Contact", href: "#contact" },
-  ];
+  { name: "Home", href: "/" },
+  { name: "About Us", href: "/about" },
+  { name: "Services", href: "/services" },
+  { name: "Our Menu", href: "/menu" },
+  { name: "Gallery", href: "/gallery" },
+  { name: "Contact", href: "/contact" },
+];
 
  
 
   return (
-    <footer className="bg-[#080706] px-5 pb-8 pt-20 text-[#F5F1E8] sm:pt-28">
-      <div className="mx-auto max-w-8xl">
+    <footer className="bg-[#080706] pb-8 pt-20 text-[#F5F1E8] sm:pt-28">
+      <div className="mx-auto w-full max-w-8xl px-5 sm:px-8 lg:px-12">
         {/* Main Footer */}
         <div className="grid gap-14 border-b border-[#3B3022] pb-12 lg:grid-cols-[1.5fr_1fr_1fr]">
           {/* Brand Section */}
           <div>
-            <a href="/" className="inline-block">
+            <Link to="/" className="inline-block">
               <img
                 src={logo}
                 alt="Golden Catering"
                 className="h-auto w-44 object-contain"
               />
-            </a>
+            </Link>
 
             <h2 className="mt-8 max-w-md text-4xl leading-tight text-[#F5F1E8] sm:text-5xl">
               Every celebration
@@ -41,73 +42,73 @@ function Footer() {
             </p>
 
             {/* Social Icons */}
-            {/* Social Icons */}
-<div className="mt-8 flex items-center gap-3">
-  <a
-    href="https://www.facebook.com/YOUR_PAGE"
-    target="_blank"
-    rel="noreferrer"
-    aria-label="Facebook"
-    className="flex h-11 w-11 items-center justify-center rounded-full border border-[#5D4B2B] text-[#D4AF37] transition-all duration-300 hover:border-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#080706]"
-  >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="18"
-      height="18"
-      viewBox="0 0 24 24"
-      fill="currentColor"
-    >
-      <path d="M14 8h3V4h-3c-3.3 0-5 2-5 5v3H6v4h3v8h4v-8h3l1-4h-4V9c0-.7.3-1 1-1z" />
-    </svg>
-  </a>
+       
+      <div className="mt-8 flex items-center gap-3">
+        <a
+          href="https://www.facebook.com/YOUR_PAGE"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Facebook"
+          className="flex h-11 w-11 items-center justify-center rounded-full border border-[#5D4B2B] text-[#D4AF37] transition-all duration-300 hover:border-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#080706]"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path d="M14 8h3V4h-3c-3.3 0-5 2-5 5v3H6v4h3v8h4v-8h3l1-4h-4V9c0-.7.3-1 1-1z" />
+          </svg>
+        </a>
 
-  <a
-    href="https://www.instagram.com/golden__catering__services/"
-    target="_blank"
-    rel="noreferrer"
-    aria-label="Instagram"
-    className="flex h-11 w-11 items-center justify-center rounded-full border border-[#5D4B2B] text-[#D4AF37] transition-all duration-300 hover:border-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#080706]"
-  >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="18"
-      height="18"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <rect width="20" height="20" x="2" y="2" rx="5" />
-      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-    </svg>
-  </a>
+        <a
+          href="https://www.instagram.com/golden__catering__services/"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Instagram"
+          className="flex h-11 w-11 items-center justify-center rounded-full border border-[#5D4B2B] text-[#D4AF37] transition-all duration-300 hover:border-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#080706]"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.8"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <rect width="20" height="20" x="2" y="2" rx="5" />
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+          </svg>
+        </a>
 
-  <a
-    href="https://wa.me/918754698739"
-    target="_blank"
-    rel="noreferrer"
-    aria-label="WhatsApp"
-    className="flex h-11 w-11 items-center justify-center rounded-full border border-[#5D4B2B] text-[#D4AF37] transition-all duration-300 hover:border-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#080706]"
-  >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="18"
-      height="18"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M21 11.5a8.38 8.38 0 0 1-9 8.5 8.5 8.5 0 0 1-4-.9L3 21l1.9-4.7A8.5 8.5 0 1 1 21 11.5z" />
-      <path d="M8 9.5c.3 2 2.5 4.2 4.5 4.5l1.5-1.5 2 1" />
-    </svg>
-  </a>
-</div>
+        <a
+          href="https://wa.me/918754698739"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="WhatsApp"
+          className="flex h-11 w-11 items-center justify-center rounded-full border border-[#5D4B2B] text-[#D4AF37] transition-all duration-300 hover:border-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#080706]"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.8"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M21 11.5a8.38 8.38 0 0 1-9 8.5 8.5 8.5 0 0 1-4-.9L3 21l1.9-4.7A8.5 8.5 0 1 1 21 11.5z" />
+            <path d="M8 9.5c.3 2 2.5 4.2 4.5 4.5l1.5-1.5 2 1" />
+          </svg>
+        </a>
+      </div>
           </div>
 
           {/* Navigation */}
@@ -119,17 +120,17 @@ function Footer() {
             <ul className="space-y-4">
               {menuLinks.map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.href}
-                    className="group inline-flex items-center text-sm text-[#B9AD9B] transition-colors duration-300 hover:text-[#D4AF37]"
-                  >
-                    {link.name}
+                 <Link
+                  to={link.href}
+                  className="group inline-flex items-center text-sm text-[#B9AD9B] transition-colors duration-300 hover:text-[#D4AF37]"
+                >
+                  {link.name}
 
-                    <ArrowUpRight
-                      size={14}
-                      className="ml-2 opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:opacity-100"
-                    />
-                  </a>
+                  <ArrowUpRight
+                    size={14}
+                    className="ml-2 opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:opacity-100"
+                  />
+                </Link>
                 </li>
               ))}
             </ul>
@@ -196,12 +197,13 @@ function Footer() {
             Crafted with passion. Served with love.
           </p>
 
-          <a
-            href="#top"
+          <button
+            type="button"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="transition-colors hover:text-[#D4AF37]"
           >
             Back to top ↑
-          </a>
+          </button>
         </div>
       </div>
     </footer>

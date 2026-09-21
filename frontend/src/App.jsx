@@ -3,7 +3,14 @@ import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import ServicesPage from "./pages/ServicesPage";
+import MenuPage from "./pages/MenuPage";
+import GalleryPage from "./pages/GalleryPage";
+import ContactPage from "./pages/ContactPage";
+import AboutPage from "./pages/AboutPage";
 import Hero from "./components/Hero";
 import Services from "./components/Services";
 import About from "./components/About";
@@ -20,14 +27,23 @@ function App() {
 
       {/* Hero Section */}
      <main>
-      <section id="home">
+      {/* <section id="home">
 
       
         <Hero />
         </section>
         <Services />
         <About />
-          <Menu />
+          <Menu /> */}
+
+            <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/menu" element={<MenuPage />} />
+          <Route path="/gallery" element={<GalleryPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
            
       </main>
       <Footer />

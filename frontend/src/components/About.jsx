@@ -5,9 +5,9 @@ function About() {
   return (
     <section
       id="about"
-      className="bg-[#F5F1E8] px-5 py-24 text-[#17130E] sm:py-32"
+      className="bg-[#F5F1E8] py-24 text-[#17130E] sm:py-32"
     >
-      <div className="mx-auto max-w-8xl">
+      <div className="mx-auto w-full max-w-8xl px-5 sm:px-8 lg:px-12">
         {/* Section Header */}
         <div className="mb-16">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-[#8F681C]">
@@ -79,7 +79,7 @@ function About() {
 
             {/* CTA */}
             <a
-              href="#contact"
+              href="contact"
               className="inline-flex items-center bg-[#17130E] px-7 py-4 text-xs font-semibold uppercase tracking-[0.2em] text-[#D4AF37] transition-colors duration-300 hover:bg-[#3F3424]"
             >
               Know More
