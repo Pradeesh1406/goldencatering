@@ -16,11 +16,13 @@ import Services from "./components/Services";
 import About from "./components/About";
 import Menu from "./components/Menu";
 import Footer from "./components/Footer";
+import Loader from "./components/Loader";
 
 
 function App() {
   return (
     <div className="min-h-screen bg-[#080706] text-white">
+          <Loader />
 
       {/* Navbar */}
       <Navbar />
