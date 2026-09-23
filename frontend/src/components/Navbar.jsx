@@ -12,8 +12,8 @@ function Navbar() {
   { name: "Home", href: "/" },
   { name: "AboutUs", href: "/about" },
   { name: "Services", href: "/services" },
-  { name: "Menu", href: "/menu" },
-  { name: "Gallery", href: "/gallery" },
+  // { name: "Menu", href: "/menu" },
+  // { name: "Gallery", href: "/gallery" },
   { name: "Contact", href: "/contact" },
 ];
 
