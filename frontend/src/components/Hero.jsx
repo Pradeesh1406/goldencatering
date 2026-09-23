@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { ArrowRight, Phone } from "lucide-react";
 
@@ -150,24 +150,25 @@ function Hero() {
         {/* CTA Buttons */}
         <div className="mt-9 flex w-full flex-col items-center justify-center gap-4 sm:flex-row">
 
-          <a
-            href="#contact"
-            className="group flex w-full max-w-xs items-center justify-center gap-3 rounded-full bg-[#d4af37] px-7 py-4 font-sans text-sm font-semibold text-black transition duration-300 hover:bg-[#f5d77a] sm:w-auto"
-          >
-            Book Your Event
-            <ArrowRight
-              size={18}
-              className="transition-transform group-hover:translate-x-1"
-            />
-          </a>
+         <Link
+  to="/contact"
+  className="group flex w-full max-w-xs items-center justify-center gap-3 rounded-full bg-[#d4af37] px-7 py-4 font-sans text-sm font-semibold text-black transition duration-300 hover:bg-[#f5d77a] sm:w-auto"
+>
+  Book Your Event
 
-          <a
+  <ArrowRight
+    size={18}
+    className="transition-transform group-hover:translate-x-1"
+  />
+</Link>
+
+          {/* <a
             href="#menu"
             className="flex w-full max-w-xs items-center justify-center gap-3 rounded-full border border-[#d4af37] px-7 py-4 font-sans text-sm text-white transition duration-300 hover:bg-[#d4af37] hover:text-black sm:w-auto"
           >
             Explore Our Menu
             <ArrowRight size={18} />
-          </a>
+          </a> */}
 
         </div>
 
