@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 import aboutImage from "../assets/hero/hero2desk.png";
 
 function About() {
@@ -78,13 +78,13 @@ function About() {
             </div>
 
             {/* CTA */}
-            <a
-              href="contact"
-              className="inline-flex items-center bg-[#17130E] px-7 py-4 text-xs font-semibold uppercase tracking-[0.2em] text-[#D4AF37] transition-colors duration-300 hover:bg-[#3F3424]"
-            >
-              Know More
-              <span className="ml-4 text-lg">↗</span>
-            </a>
+            <Link
+  to="/contact"
+  className="inline-flex items-center bg-[#17130E] px-7 py-4 text-xs font-semibold uppercase tracking-[0.2em] text-[#D4AF37] transition-colors duration-300 hover:bg-[#3F3424]"
+>
+  Know More
+  <span className="ml-4 text-lg">↗</span>
+</Link>
           </div>
         </div>
       </div>
